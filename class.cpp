@@ -1,3 +1,4 @@
+#include <iostream>
 #include <print>
 #include <string>
 
@@ -33,16 +34,13 @@ public:
     stud_height = stud.height;
   };
 
-  // allow moving
-  StudentDetails(const StudentDetails &&) noexcept = default;
-  StudentDetails &operator=(const StudentDetails &&) noexcept = default;
-
-  StudentDetails(const StudentDetails &) = delete; //-->Disable Copy constructor
-  StudentDetails &operator=(const StudentDetails &) = delete;
+  // StudentDetails(const StudentDetails &) = delete; //-->Disable Copy
+  // constructor StudentDetails &operator=(const StudentDetails &) = delete;
   //-->Disable copy assignment
 
   void print();
   string getName() const;
+  friend std::ostream &operator<<(std::ostream &out, const StudentDetails &sdt);
 
 private:
   int adm_no;
@@ -58,12 +56,19 @@ int main() {
   StudentDetails s1; // default constructor
   StudentDetails s2(4092, "Jakom Okuome", "Grade 11");
   StudentDetails s3(f1);
+  StudentDetails *s4 = new StudentDetails();
 
   s1.print();
   s2.print();
   s3.print();
+  s4->print();
 
   println("S1 Name: {}", s1.getName());
+  // std::cout << s1;
+  std::cout << StudentDetails();
+
+  delete s4;    // --> Free up used memory
+  s4 = nullptr; //  --> point to null to prevent dangling pointers
 
   return 0;
 }
@@ -81,3 +86,13 @@ void StudentDetails::print() {
 };
 
 inline string StudentDetails::getName() const { return stud_name; };
+
+// outputstream: Making the class printabe with std::cout
+std::ostream &operator<<(std::ostream &out, const StudentDetails &sdt) {
+  out << "[ Adm No: " << sdt.adm_no << " Name: " << sdt.stud_name
+      << " Class: " << sdt.stud_class << " Height: " << sdt.stud_height
+      << " ]\n";
+  return out;
+};
+
+StudentDetails::~StudentDetails() {};
