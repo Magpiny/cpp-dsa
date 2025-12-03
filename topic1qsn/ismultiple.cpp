@@ -20,7 +20,12 @@ bool isMultiple(long m, long n) {
 };
 
 int main() {
-  std::println("Is 30 multipe of 7? {}", isMultiple(-7, 30));
+  int a = 50;
+  int b = 68;
+  int mod = (a - b) % 100;
+
+  std::println("(50-68)%100 is:{}", mod);
+  std::println("Is 30 multipe of 10? {}", isMultiple(10, 30));
 
   return EXIT_SUCCESS;
 }
