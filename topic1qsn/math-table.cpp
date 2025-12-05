@@ -5,9 +5,30 @@
 // function signature
 void print_math_table(long width, long height);
 
-int main() {
+int main(int argc, char *argv[]) {
   try {
-    print_math_table(19, 19);
+    long cols;
+    long rows;
+
+    if (argc == 3) {
+      cols = std::stoi(argv[1]);
+      rows = std::stoi(argv[2]);
+    } else {
+      // Enter values one by one through prompts
+      std::print("Enter number of rows: ");
+      std::cin >> rows;
+      std::print("Enter number of columns: ");
+      std::cin >> cols;
+    }
+
+    // Handle cin failure states
+    if (std::cin.fail()) {
+      std::cin.clear();
+      std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+      throw std::invalid_argument("Invalid input");
+    }
+
+    print_math_table(cols, rows);
   } catch (const std::invalid_argument &err) {
     std::cerr << "Error: " << err.what() << "\n";
   }
@@ -22,31 +43,31 @@ void print_math_table(long rows, long cols) {
   }
 
   // --> Make the table
-  long **math_table = new long *[rows];
+  long **math_table = new long *[rows + 1];
 
   // create the rows
-  for (long i = 0; i < rows; ++i) {
-    math_table[i] = new long[cols];
+  for (long i = 1; i < rows + 1; ++i) {
+    math_table[i] = new long[cols + 1];
   }
 
   // --> Print the table Heading
   const std::string table_title = "A Multiplication Table";
-  std::println("\n{:<10} : {}x{}", table_title, rows - 1, cols - 1);
+  std::println("\n{:<10} : {}x{}", table_title, rows, cols);
 
   // --> Print the table header row
   std::print("   X  ");
-  for (long j = 0; j < cols; ++j) {
+  for (long j = 1; j < cols + 1; ++j) {
     std::print("{:>4}", j);
   }
   std::print("\n ----|");
-  for (long j = 0; j < cols; j++)
+  for (long j = 1; j < cols + 1; j++)
     std::print("----");
   std::println();
 
   // --> Print the contents of the table
-  for (long i = 0; i < rows; ++i) {
+  for (long i = 1; i < rows + 1; ++i) {
     std::print("{:4} |", i);
-    for (long j = 0; j < cols; ++j) {
+    for (long j = 1; j < cols + 1; ++j) {
       math_table[i][j] = i * j;
       std::print("{:4}", math_table[i][j]);
     }
@@ -54,7 +75,7 @@ void print_math_table(long rows, long cols) {
   }
 
   // deallocate memory
-  for (long i = 0; i < rows; ++i) {
+  for (long i = 1; i < rows + 1; ++i) {
     delete[] math_table[i];
   }
 
