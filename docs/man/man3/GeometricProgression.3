@@ -1,0 +1,108 @@
+.TH "GeometricProgression" 3 "Mon Dec 15 2025 21:05:24" "Version 0.0.1" "Progression Library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+GeometricProgression \- Geometric progression: each term is obtained by multiplying by a fixed base\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <progression\&.hpp>\fP
+.PP
+Inherits \fBProgression\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGeometricProgression\fP (long b=2)"
+.br
+.RI "Constructs a geometric progression\&. "
+.ti -1c
+.RI "long \fBnext_value\fP () override"
+.br
+.RI "Returns the next term in the geometric progression\&. "
+.in -1c
+
+Public Member Functions inherited from \fBProgression\fP
+.in +1c
+.ti -1c
+.RI "virtual long \fBfirst_value\fP ()"
+.br
+.RI "Resets the progression and returns the first value\&. "
+.ti -1c
+.RI "void \fBprint_progression\fP (int n)"
+.br
+.RI "Prints the first n terms of the progression\&. "
+.ti -1c
+.RI "virtual \fB~Progression\fP ()=default"
+.br
+.RI "Virtual destructor to allow proper cleanup of derived objects\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBbase\fP"
+.br
+.RI "Fixed multiplier applied at each step\&. "
+.in -1c
+
+Protected Attributes inherited from \fBProgression\fP
+.in +1c
+.ti -1c
+.RI "long \fBcurr\fP"
+.br
+.RI "Current value in the progression\&. "
+.ti -1c
+.RI "long \fBfirst\fP"
+.br
+.RI "First value of the progression\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Geometric progression: each term is obtained by multiplying by a fixed base\&. 
+
+
+.PP
+\fBSee also\fP
+.RS 4
+\fBFibonacciPg\fP Example with \fBbase\fP = 2, \fBfirst\fP = 1: 1, 2, 4, 8, \&.\&.\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "GeometricProgression::GeometricProgression (long b = \fR2\fP)"
+
+.PP
+Constructs a geometric progression\&. Geometric \fBProgression\fP\&.
+
+.PP
+The first term is always 1\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIb\fP Multiplication factor (default = 2) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "long GeometricProgression::next_value ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Returns the next term in the geometric progression\&. Multiplies the current value by the fixed base\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The next value\&. 
+.RE
+.PP
+
+.PP
+Implements \fBProgression\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Progression Library from the source code\&.

@@ -1,0 +1,218 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.15.0">
+  <compound kind="class">
+    <name>ArithProgression</name>
+    <filename>class_arith_progression.html</filename>
+    <base>Progression</base>
+    <member kind="function">
+      <type></type>
+      <name>ArithProgression</name>
+      <anchorfile>class_arith_progression.html</anchorfile>
+      <anchor>ae6adf6caaed1dc60bdd9dab7e77fdeb6</anchor>
+      <arglist>(long i=1, long f=0)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>next_value</name>
+      <anchorfile>class_arith_progression.html</anchorfile>
+      <anchor>a5f9023613b3f7b38942f5598ac6c4efe</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual long</type>
+      <name>first_value</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a2ff54b452237baa0939926ff14e1fe34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_progression</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>aeb6e25fee5833517b9073310bf4c9a52</anchor>
+      <arglist>(int n)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>inc</name>
+      <anchorfile>class_arith_progression.html</anchorfile>
+      <anchor>abe62e738f11278d06f2b7a642963a4cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>curr</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a8acb613e86224484a57de4d3e8a9ec0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>first</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a3846cba453b88d1ea89d94c41d7a6fe3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>FibonacciPg</name>
+    <filename>class_fibonacci_pg.html</filename>
+    <base>Progression</base>
+    <member kind="function">
+      <type></type>
+      <name>FibonacciPg</name>
+      <anchorfile>class_fibonacci_pg.html</anchorfile>
+      <anchor>abb0b89d606d93206925295922caebdd0</anchor>
+      <arglist>(long f=0, long s=1)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>first_value</name>
+      <anchorfile>class_fibonacci_pg.html</anchorfile>
+      <anchor>a980bbace502a7b5316076446c6d0325e</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>next_value</name>
+      <anchorfile>class_fibonacci_pg.html</anchorfile>
+      <anchor>a8e6400d89a8c7903bee088ca4e3a3085</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_progression</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>aeb6e25fee5833517b9073310bf4c9a52</anchor>
+      <arglist>(int n)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>sec_v</name>
+      <anchorfile>class_fibonacci_pg.html</anchorfile>
+      <anchor>a2e05b91a5a9d0782e4507a25184a0ab7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>prev</name>
+      <anchorfile>class_fibonacci_pg.html</anchorfile>
+      <anchor>af0cc4999fb4dc15724459aab2336dc0c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>curr</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a8acb613e86224484a57de4d3e8a9ec0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>first</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a3846cba453b88d1ea89d94c41d7a6fe3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>GeometricProgression</name>
+    <filename>class_geometric_progression.html</filename>
+    <base>Progression</base>
+    <member kind="function">
+      <type></type>
+      <name>GeometricProgression</name>
+      <anchorfile>class_geometric_progression.html</anchorfile>
+      <anchor>acff18f00c7b55be5aabc2d352b6556d0</anchor>
+      <arglist>(long b=2)</arglist>
+    </member>
+    <member kind="function">
+      <type>long</type>
+      <name>next_value</name>
+      <anchorfile>class_geometric_progression.html</anchorfile>
+      <anchor>a2db5eb07eedf4a79444692d27fab4a48</anchor>
+      <arglist>() override</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual long</type>
+      <name>first_value</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a2ff54b452237baa0939926ff14e1fe34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_progression</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>aeb6e25fee5833517b9073310bf4c9a52</anchor>
+      <arglist>(int n)</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>base</name>
+      <anchorfile>class_geometric_progression.html</anchorfile>
+      <anchor>a637ee2ba7e39b589e1a016257b51f620</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>curr</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a8acb613e86224484a57de4d3e8a9ec0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>first</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a3846cba453b88d1ea89d94c41d7a6fe3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="class">
+    <name>Progression</name>
+    <filename>class_progression.html</filename>
+    <member kind="function" virtualness="virtual">
+      <type>virtual long</type>
+      <name>first_value</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a2ff54b452237baa0939926ff14e1fe34</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function" virtualness="pure">
+      <type>virtual long</type>
+      <name>next_value</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>aaf7ff9664dc26722c4839b9bcccf219f</anchor>
+      <arglist>()=0</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_progression</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>aeb6e25fee5833517b9073310bf4c9a52</anchor>
+      <arglist>(int n)</arglist>
+    </member>
+    <member kind="function" virtualness="virtual">
+      <type>virtual</type>
+      <name>~Progression</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a7dcea34ac37d351dc632b08337bbc9cb</anchor>
+      <arglist>()=default</arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>curr</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a8acb613e86224484a57de4d3e8a9ec0d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable" protection="protected">
+      <type>long</type>
+      <name>first</name>
+      <anchorfile>class_progression.html</anchorfile>
+      <anchor>a3846cba453b88d1ea89d94c41d7a6fe3</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+</tagfile>

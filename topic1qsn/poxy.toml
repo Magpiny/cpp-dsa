@@ -1,0 +1,14 @@
+# poxy.toml
+name = "Calendar Tool"
+description = "A C++23 CLI tool for generating leap-year aware calendars."
+license = "MIT"
+
+# FIX 1: Theme must be a simple string at the root level.
+# Valid values: "dark", "light", "custom"
+theme = "dark"
+
+[sources]
+paths           = [ './' ]
+# recursive_paths = [ '../include' ]
+patterns        = [ '*.h', '*.hpp', '*.dox', '*.md', 'calendar.cpp' ]
+# strip_paths     = [ '../include', 'pages' ]

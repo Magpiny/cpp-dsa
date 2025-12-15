@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classProgression.html" title="A header only c++ progression library." alt="" coords="5,57,103,85"/>
+<area shape="rect" id="Node000001" href="$classArithProgression.html" title="Arithmetic progression: each term is obtained by adding a fixed increment." alt="" coords="169,5,298,33"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="117,50,185,32,181,35,119,55"/>
+<area shape="rect" id="Node000002" href="$classFibonacciPg.html" title="Fibonacci Progression: each term is the sum of the previous two terms." alt="" coords="185,57,282,85"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="118,69,187,70,182,72,119,74"/>
+<area shape="rect" id="Node000003" href="$classGeometricProgression.html" title="Geometric progression: each term is obtained by multiplying by a fixed base." alt="" coords="151,109,316,137"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="118,87,185,108,180,110,117,92"/>
+</map>

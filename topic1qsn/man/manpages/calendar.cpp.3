@@ -1,0 +1,205 @@
+.TH "calendar.cpp" 3 "Sun Dec 14 2025 15:25:29" "Version 0.0.1" "My Calendar" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+calendar.cpp \- A C++23 console application to generate a yearly calendar\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fR#include <array>\fP
+.br
+\fR#include <iostream>\fP
+.br
+\fR#include <limits>\fP
+.br
+\fR#include <print>\fP
+.br
+\fR#include <stdexcept>\fP
+.br
+\fR#include <string>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBis_leap_year\fP (int year)"
+.br
+.RI "Checks if a specific year is a leap year\&. "
+.ti -1c
+.RI "int \fBdays_in_feb\fP (int year)"
+.br
+.RI "Determines the number of days in February for a specific year\&. "
+.ti -1c
+.RI "bool \fBis_valid_year\fP (int year)"
+.br
+.RI "Validates if the year is within the supported range\&. "
+.ti -1c
+.RI "int \fBcalculate_jan_1_day\fP (int year)"
+.br
+.RI "Calculates the day of the week for January 1st of the given year\&. "
+.ti -1c
+.RI "void \fBprint_calendar\fP (int year, int start_day_num)"
+.br
+.RI "Prints the formatted calendar to the console\&. "
+.ti -1c
+.RI "int \fBmain\fP (int argc, char *argv[])"
+.br
+.RI "Main entry point of the application\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr std::array< std::string, 12 > \fBMONTHS\fP"
+.br
+.RI "Full names of the twelve months\&. "
+.ti -1c
+.RI "constexpr std::array< std::string, 7 > \fBDAYS\fP"
+.br
+.RI "Full names of the seven days of the week\&. "
+.ti -1c
+.RI "constexpr std::array< std::string, 7 > \fBDAYS_ABBR\fP"
+.br
+.RI "Abbreviated names of the days for column headers\&. "
+.ti -1c
+.RI "constexpr std::array< int, 12 > \fBDAYS_IN_MONTH\fP"
+.br
+.RI "Standard number of days in each month (non-leap year)\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A C++23 console application to generate a yearly calendar\&. 
+
+This program accepts a four-digit year and prints a formatted calendar for that year to the standard output\&. It handles leap year logic, calculates the starting day of the week automatically, and formats the output using \fRstd::print\fP and ANSI color codes\&.
+.IP "\(bu" 2
+\fBNote\fP
+.RS 4
+This program requires a C++23 compliant compiler due to the usage of \fR<print>\fP and \fRstd::format\fP\&. 
+.RE
+.PP
+
+.PP
+
+.SH "Function Documentation"
+.PP 
+.SS "int calculate_jan_1_day (int year)"
+
+.PP
+Calculates the day of the week for January 1st of the given year\&. This function uses a variation of the standard day-of-week algorithms (similar to Gauss's or Zeller's) to determine the offset\&.
+.IP "\(bu" 2
+\fBParameters\fP
+.RS 4
+\fIyear\fP The four-digit year\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An integer representing the day of the week (0 = Sunday, 1 = Monday, \&.\&.\&., 6 = Saturday)\&. 
+.RE
+.PP
+
+.PP
+
+.SS "int days_in_feb (int year)"
+
+.PP
+Determines the number of days in February for a specific year\&. 
+.IP "\(bu" 2
+\fBParameters\fP
+.RS 4
+\fIyear\fP The year to check\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fR29\fP if the year is a leap year, \fR28\fP otherwise\&. 
+.RE
+.PP
+
+.PP
+
+.SS "bool is_leap_year (int year)"
+
+.PP
+Checks if a specific year is a leap year\&. A year is a leap year if it is divisible by 4, except for end-of-century years, which must be divisible by 400\&.
+.IP "\(bu" 2
+\fBParameters\fP
+.RS 4
+\fIyear\fP The year to validate\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fRtrue\fP if the year is a leap year, \fRfalse\fP otherwise\&. 
+.RE
+.PP
+
+.PP
+
+.SS "bool is_valid_year (int year)"
+
+.PP
+Validates if the year is within the supported range\&. 
+.IP "\(bu" 2
+\fBParameters\fP
+.RS 4
+\fIyear\fP The year input by the user\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fRtrue\fP if year is between 1 and 9999, \fRfalse\fP otherwise\&. 
+.RE
+.PP
+
+.PP
+
+.SS "int main (int argc, char * argv[])"
+
+.PP
+Main entry point of the application\&. Handles user input via Command Line Arguments or Standard Input\&. It validates the input for numeric consistency and range before generating the calendar\&.
+.IP "\(bu" 2
+\fBParameters\fP
+.RS 4
+\fIargc\fP Number of command-line arguments\&. 
+.br
+\fIargv\fP Array of command-line argument strings\&. 
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+\fR0\fP on success, \fR1\fP on error (invalid input or out of range)\&.
+.RE
+.PP
+
+.IP "\(bu" 2
+\fBExceptions\fP
+.RS 4
+\fIstd::invalid_argument\fP If non-numeric input is provided via \fRstd::cin\fP\&. 
+.br
+\fIstd::out_of_range\fP If the year is not between 1 and 9999\&. 
+.RE
+.PP
+
+.PP
+
+.SS "void print_calendar (int year, int start_day_num)"
+
+.PP
+Prints the formatted calendar to the console\&. Iterates through all 12 months, calculating spacing for the first week and wrapping weeks correctly\&. It highlights the date numbers in Cyan using ANSI escape codes\&.
+.IP "\(bu" 2
+\fBParameters\fP
+.RS 4
+\fIyear\fP The year to display\&. 
+.br
+\fIstart_day_num\fP The calculated weekday index (0-6) for January 1st of that year\&. 
+.RE
+.PP
+
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Calendar from the source code\&.

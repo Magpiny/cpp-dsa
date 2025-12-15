@@ -1,0 +1,107 @@
+.TH "ArithProgression" 3 "Mon Dec 15 2025 21:05:24" "Version 0.0.1" "Progression Library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ArithProgression \- Arithmetic progression: each term is obtained by adding a fixed increment\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <progression\&.hpp>\fP
+.PP
+Inherits \fBProgression\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBArithProgression\fP (long i=1, long f=0)"
+.br
+.RI "Constructs an arithmetic progression\&. "
+.ti -1c
+.RI "long \fBnext_value\fP () override"
+.br
+.RI "Returns the next term in the arithmetic progression\&. "
+.in -1c
+
+Public Member Functions inherited from \fBProgression\fP
+.in +1c
+.ti -1c
+.RI "virtual long \fBfirst_value\fP ()"
+.br
+.RI "Resets the progression and returns the first value\&. "
+.ti -1c
+.RI "void \fBprint_progression\fP (int n)"
+.br
+.RI "Prints the first n terms of the progression\&. "
+.ti -1c
+.RI "virtual \fB~Progression\fP ()=default"
+.br
+.RI "Virtual destructor to allow proper cleanup of derived objects\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBinc\fP"
+.br
+.RI "Fixed increment added at each step\&. "
+.in -1c
+
+Protected Attributes inherited from \fBProgression\fP
+.in +1c
+.ti -1c
+.RI "long \fBcurr\fP"
+.br
+.RI "Current value in the progression\&. "
+.ti -1c
+.RI "long \fBfirst\fP"
+.br
+.RI "First value of the progression\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &out, const \fBArithProgression\fP &sdt)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Arithmetic progression: each term is obtained by adding a fixed increment\&. 
+
+Example with increment = 3, first = 2: 2, 5, 8, 11, \&.\&.\&. 
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ArithProgression::ArithProgression (long i = \fR1\fP, long f = \fR0\fP)"
+
+.PP
+Constructs an arithmetic progression\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIi\fP Increment (default = 1) 
+.br
+\fIf\fP First value (default = 0) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "long ArithProgression::next_value ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Returns the next term in the arithmetic progression\&. Adds the fixed increment to the current value\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The next value\&. 
+.RE
+.PP
+
+.PP
+Implements \fBProgression\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Progression Library from the source code\&.

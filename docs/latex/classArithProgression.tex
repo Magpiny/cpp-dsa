@@ -1,0 +1,120 @@
+\doxysection{Arith\+Progression Class Reference}
+\hypertarget{classArithProgression}{}\label{classArithProgression}\index{ArithProgression@{ArithProgression}}
+
+
+Arithmetic progression\+: each term is obtained by adding a fixed increment.  
+
+
+
+
+{\ttfamily \#include $<$progression.\+hpp$>$}
+
+
+
+Inheritance diagram for Arith\+Progression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classArithProgression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Arith\+Progression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classArithProgression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classArithProgression_ae6adf6caaed1dc60bdd9dab7e77fdeb6}{Arith\+Progression}} (long i=1, long f=0)
+\begin{DoxyCompactList}\small\item\em Constructs an arithmetic progression. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classArithProgression_a5f9023613b3f7b38942f5598ac6c4efe}{next\+\_\+value}} () override
+\begin{DoxyCompactList}\small\item\em Returns the next term in the arithmetic progression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classProgression}{Progression}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual long \mbox{\hyperlink{classProgression_a2ff54b452237baa0939926ff14e1fe34}{first\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em Resets the progression and returns the first value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProgression_aeb6e25fee5833517b9073310bf4c9a52}{print\+\_\+progression}} (int n)
+\begin{DoxyCompactList}\small\item\em Prints the first n terms of the progression. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Progression} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor to allow proper cleanup of derived objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classArithProgression_abe62e738f11278d06f2b7a642963a4cf}\label{classArithProgression_abe62e738f11278d06f2b7a642963a4cf} 
+long {\bfseries inc}
+\begin{DoxyCompactList}\small\item\em Fixed increment added at each step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classProgression}{Progression}}}
+\begin{DoxyCompactItemize}
+\item 
+long {\bfseries curr}
+\begin{DoxyCompactList}\small\item\em Current value in the progression. \end{DoxyCompactList}\item 
+long {\bfseries first}
+\begin{DoxyCompactList}\small\item\em First value of the progression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classArithProgression_a9ada89fa63f1ebcee8757aa2239c4246}\label{classArithProgression_a9ada89fa63f1ebcee8757aa2239c4246} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, const \mbox{\hyperlink{classArithProgression}{Arith\+Progression}} \&sdt)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Arithmetic progression\+: each term is obtained by adding a fixed increment. 
+
+Example with increment = 3, first = 2\+: 2, 5, 8, 11, ... 
+
+\label{doc-constructors}
+\Hypertarget{classArithProgression_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classArithProgression_ae6adf6caaed1dc60bdd9dab7e77fdeb6}\index{ArithProgression@{ArithProgression}!ArithProgression@{ArithProgression}}
+\index{ArithProgression@{ArithProgression}!ArithProgression@{ArithProgression}}
+\doxysubsubsection{\texorpdfstring{ArithProgression()}{ArithProgression()}}
+{\footnotesize\ttfamily \label{classArithProgression_ae6adf6caaed1dc60bdd9dab7e77fdeb6} 
+Arith\+Progression\+::\+Arith\+Progression (\begin{DoxyParamCaption}\item[{long}]{i}{ = {\ttfamily 1}, }\item[{long}]{f}{ = {\ttfamily 0}}\end{DoxyParamCaption})}
+
+
+
+Constructs an arithmetic progression. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Increment (default = 1) \\
+\hline
+{\em f} & First value (default = 0) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classArithProgression_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classArithProgression_a5f9023613b3f7b38942f5598ac6c4efe}\index{ArithProgression@{ArithProgression}!next\_value@{next\_value}}
+\index{next\_value@{next\_value}!ArithProgression@{ArithProgression}}
+\doxysubsubsection{\texorpdfstring{next\_value()}{next\_value()}}
+{\footnotesize\ttfamily \label{classArithProgression_a5f9023613b3f7b38942f5598ac6c4efe} 
+long Arith\+Progression\+::next\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the next term in the arithmetic progression. 
+
+Adds the fixed increment to the current value. \begin{DoxyReturn}{Returns}
+The next value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classProgression_aaf7ff9664dc26722c4839b9bcccf219f}{Progression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+progression.\+hpp\end{DoxyCompactItemize}

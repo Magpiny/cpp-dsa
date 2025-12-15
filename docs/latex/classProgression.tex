@@ -1,0 +1,170 @@
+\doxysection{Progression Class Reference}
+\hypertarget{classProgression}{}\label{classProgression}\index{Progression@{Progression}}
+
+
+A header only c++ progression library.  
+
+
+
+
+{\ttfamily \#include $<$progression.\+hpp$>$}
+
+
+
+Inheritance diagram for Progression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classProgression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Progression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classProgression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual long \mbox{\hyperlink{classProgression_a2ff54b452237baa0939926ff14e1fe34}{first\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em Resets the progression and returns the first value. \end{DoxyCompactList}\item 
+virtual long \mbox{\hyperlink{classProgression_aaf7ff9664dc26722c4839b9bcccf219f}{next\+\_\+value}} ()=0
+\begin{DoxyCompactList}\small\item\em Advances to and returns the next value in the progression. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProgression_aeb6e25fee5833517b9073310bf4c9a52}{print\+\_\+progression}} (int n)
+\begin{DoxyCompactList}\small\item\em Prints the first n terms of the progression. \end{DoxyCompactList}\item 
+\Hypertarget{classProgression_a7dcea34ac37d351dc632b08337bbc9cb}\label{classProgression_a7dcea34ac37d351dc632b08337bbc9cb} 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Progression} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor to allow proper cleanup of derived objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}\label{classProgression_a8acb613e86224484a57de4d3e8a9ec0d} 
+long {\bfseries curr}
+\begin{DoxyCompactList}\small\item\em Current value in the progression. \end{DoxyCompactList}\item 
+\Hypertarget{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}\label{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3} 
+long {\bfseries first}
+\begin{DoxyCompactList}\small\item\em First value of the progression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A header only c++ progression library. 
+
+\begin{DoxyAuthor}{Author}
+Magpiny BO 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+15 December 2025 
+\end{DoxyDate}
+\begin{DoxyWarning}{Warning}
+Ensure proper memory management while using this library 
+\end{DoxyWarning}
+\begin{DoxyNote}{Note}
+This library implements arithmetic, geometric and fibonacci progressions only
+\end{DoxyNote}
+Basic Usage 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}progression.hpp"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ main()\{}
+\DoxyCodeLine{Progression\ *ap\ =\ \textcolor{keyword}{new}\ ArithProgression(2,\ 3);}
+\DoxyCodeLine{ap-\/>\mbox{\hyperlink{classProgression_aeb6e25fee5833517b9073310bf4c9a52}{print\_progression}}(10);}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keyword}{delete}\ ap;}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordflow}{return}\ EXIT\_SUCCESS;}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+Abstract base class representing a generic numeric progression.
+
+This class defines the common interface for all progressions. It cannot be instantiated directly because \doxylink{classProgression_aaf7ff9664dc26722c4839b9bcccf219f}{next\+\_\+value()} is pure virtual. Derived classes must implement their specific way of advancing to the next term. 
+
+\label{doc-func-members}
+\Hypertarget{classProgression_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classProgression_a2ff54b452237baa0939926ff14e1fe34}\index{Progression@{Progression}!first\_value@{first\_value}}
+\index{first\_value@{first\_value}!Progression@{Progression}}
+\doxysubsubsection{\texorpdfstring{first\_value()}{first\_value()}}
+{\footnotesize\ttfamily \label{classProgression_a2ff54b452237baa0939926ff14e1fe34} 
+long Progression\+::first\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Resets the progression and returns the first value. 
+
+This function is called at the beginning of \doxylink{classProgression_aeb6e25fee5833517b9073310bf4c9a52}{print\+\_\+progression()} to ensure the sequence starts from the beginning. \begin{DoxyReturn}{Returns}
+The first value in the progression. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classFibonacciPg_a980bbace502a7b5316076446c6d0325e}{Fibonacci\+Pg}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classProgression_a2ff54b452237baa0939926ff14e1fe34_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classProgression_aaf7ff9664dc26722c4839b9bcccf219f}\index{Progression@{Progression}!next\_value@{next\_value}}
+\index{next\_value@{next\_value}!Progression@{Progression}}
+\doxysubsubsection{\texorpdfstring{next\_value()}{next\_value()}}
+{\footnotesize\ttfamily \label{classProgression_aaf7ff9664dc26722c4839b9bcccf219f} 
+virtual long Progression\+::next\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Advances to and returns the next value in the progression. 
+
+This is a pure virtual function – derived classes must provide their own implementation. \begin{DoxyReturn}{Returns}
+The next value in the sequence. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{classArithProgression_a5f9023613b3f7b38942f5598ac6c4efe}{Arith\+Progression}}, \mbox{\hyperlink{classFibonacciPg_a8e6400d89a8c7903bee088ca4e3a3085}{Fibonacci\+Pg}}, and \mbox{\hyperlink{classGeometricProgression_a2db5eb07eedf4a79444692d27fab4a48}{Geometric\+Progression}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classProgression_aaf7ff9664dc26722c4839b9bcccf219f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classProgression_aeb6e25fee5833517b9073310bf4c9a52}\index{Progression@{Progression}!print\_progression@{print\_progression}}
+\index{print\_progression@{print\_progression}!Progression@{Progression}}
+\doxysubsubsection{\texorpdfstring{print\_progression()}{print\_progression()}}
+{\footnotesize\ttfamily \label{classProgression_aeb6e25fee5833517b9073310bf4c9a52} 
+void Progression\+::print\+\_\+progression (\begin{DoxyParamCaption}\item[{int}]{n}{}\end{DoxyParamCaption})}
+
+
+
+Prints the first n terms of the progression. 
+
+The output is space-\/separated on a single line followed by a newline. 
+\begin{DoxyParams}{Parameters}
+{\em n} & Number of terms to print (n ≥ 1). \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classProgression_aeb6e25fee5833517b9073310bf4c9a52_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+progression.\+hpp\end{DoxyCompactItemize}

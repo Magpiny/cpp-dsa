@@ -1,0 +1,117 @@
+\doxysection{Geometric\+Progression Class Reference}
+\hypertarget{classGeometricProgression}{}\label{classGeometricProgression}\index{GeometricProgression@{GeometricProgression}}
+
+
+Geometric progression\+: each term is obtained by multiplying by a fixed base.  
+
+
+
+
+{\ttfamily \#include $<$progression.\+hpp$>$}
+
+
+
+Inheritance diagram for Geometric\+Progression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classGeometricProgression__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Geometric\+Progression\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{classGeometricProgression__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGeometricProgression_acff18f00c7b55be5aabc2d352b6556d0}{Geometric\+Progression}} (long b=2)
+\begin{DoxyCompactList}\small\item\em Constructs a geometric progression. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classGeometricProgression_a2db5eb07eedf4a79444692d27fab4a48}{next\+\_\+value}} () override
+\begin{DoxyCompactList}\small\item\em Returns the next term in the geometric progression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classProgression}{Progression}}}
+\begin{DoxyCompactItemize}
+\item 
+virtual long \mbox{\hyperlink{classProgression_a2ff54b452237baa0939926ff14e1fe34}{first\+\_\+value}} ()
+\begin{DoxyCompactList}\small\item\em Resets the progression and returns the first value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classProgression_aeb6e25fee5833517b9073310bf4c9a52}{print\+\_\+progression}} (int n)
+\begin{DoxyCompactList}\small\item\em Prints the first n terms of the progression. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Progression} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor to allow proper cleanup of derived objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classGeometricProgression_a637ee2ba7e39b589e1a016257b51f620}\label{classGeometricProgression_a637ee2ba7e39b589e1a016257b51f620} 
+long {\bfseries base}
+\begin{DoxyCompactList}\small\item\em Fixed multiplier applied at each step. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classProgression}{Progression}}}
+\begin{DoxyCompactItemize}
+\item 
+long {\bfseries curr}
+\begin{DoxyCompactList}\small\item\em Current value in the progression. \end{DoxyCompactList}\item 
+long {\bfseries first}
+\begin{DoxyCompactList}\small\item\em First value of the progression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Geometric progression\+: each term is obtained by multiplying by a fixed base. 
+
+\begin{DoxySeeAlso}{See also}
+\doxylink{classFibonacciPg}{Fibonacci\+Pg} Example with \doxylink{classGeometricProgression_a637ee2ba7e39b589e1a016257b51f620}{base} = 2, \doxylink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first} = 1\+: 1, 2, 4, 8, ... 
+\end{DoxySeeAlso}
+
+
+\label{doc-constructors}
+\Hypertarget{classGeometricProgression_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGeometricProgression_acff18f00c7b55be5aabc2d352b6556d0}\index{GeometricProgression@{GeometricProgression}!GeometricProgression@{GeometricProgression}}
+\index{GeometricProgression@{GeometricProgression}!GeometricProgression@{GeometricProgression}}
+\doxysubsubsection{\texorpdfstring{GeometricProgression()}{GeometricProgression()}}
+{\footnotesize\ttfamily \label{classGeometricProgression_acff18f00c7b55be5aabc2d352b6556d0} 
+Geometric\+Progression\+::\+Geometric\+Progression (\begin{DoxyParamCaption}\item[{long}]{b}{ = {\ttfamily 2}}\end{DoxyParamCaption})}
+
+
+
+Constructs a geometric progression. 
+
+Geometric \doxylink{classProgression}{Progression}.
+
+The first term is always 1. 
+\begin{DoxyParams}{Parameters}
+{\em b} & Multiplication factor (default = 2) \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classGeometricProgression_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGeometricProgression_a2db5eb07eedf4a79444692d27fab4a48}\index{GeometricProgression@{GeometricProgression}!next\_value@{next\_value}}
+\index{next\_value@{next\_value}!GeometricProgression@{GeometricProgression}}
+\doxysubsubsection{\texorpdfstring{next\_value()}{next\_value()}}
+{\footnotesize\ttfamily \label{classGeometricProgression_a2db5eb07eedf4a79444692d27fab4a48} 
+long Geometric\+Progression\+::next\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the next term in the geometric progression. 
+
+Multiplies the current value by the fixed base. \begin{DoxyReturn}{Returns}
+The next value. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classProgression_aaf7ff9664dc26722c4839b9bcccf219f}{Progression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+progression.\+hpp\end{DoxyCompactItemize}

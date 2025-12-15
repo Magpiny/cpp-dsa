@@ -1,0 +1,136 @@
+.TH "Progression" 3 "Mon Dec 15 2025 21:05:24" "Version 0.0.1" "Progression Library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Progression \- A header only c++ progression library\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <progression\&.hpp>\fP
+.PP
+Inherited by \fBArithProgression\fP, \fBFibonacciPg\fP, and \fBGeometricProgression\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual long \fBfirst_value\fP ()"
+.br
+.RI "Resets the progression and returns the first value\&. "
+.ti -1c
+.RI "virtual long \fBnext_value\fP ()=0"
+.br
+.RI "Advances to and returns the next value in the progression\&. "
+.ti -1c
+.RI "void \fBprint_progression\fP (int n)"
+.br
+.RI "Prints the first n terms of the progression\&. "
+.ti -1c
+.RI "virtual \fB~Progression\fP ()=default"
+.br
+.RI "Virtual destructor to allow proper cleanup of derived objects\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBcurr\fP"
+.br
+.RI "Current value in the progression\&. "
+.ti -1c
+.RI "long \fBfirst\fP"
+.br
+.RI "First value of the progression\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A header only c++ progression library\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Magpiny BO 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+15 December 2025 
+.RE
+.PP
+\fBWarning\fP
+.RS 4
+Ensure proper memory management while using this library 
+.RE
+.PP
+\fBNote\fP
+.RS 4
+This library implements arithmetic, geometric and fibonacci progressions only
+.RE
+.PP
+Basic Usage 
+.PP
+.nf
+#include "progression\&.hpp"
+
+int main(){
+Progression *ap = new ArithProgression(2, 3);
+ap\->print_progression(10);
+
+delete ap;
+
+return EXIT_SUCCESS;
+}
+
+.fi
+.PP
+
+.PP
+Abstract base class representing a generic numeric progression\&.
+
+.PP
+This class defines the common interface for all progressions\&. It cannot be instantiated directly because \fBnext_value()\fP is pure virtual\&. Derived classes must implement their specific way of advancing to the next term\&. 
+.SH "Member Function Documentation"
+.PP 
+.SS "long Progression::first_value ()\fR [virtual]\fP"
+
+.PP
+Resets the progression and returns the first value\&. This function is called at the beginning of \fBprint_progression()\fP to ensure the sequence starts from the beginning\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The first value in the progression\&. 
+.RE
+.PP
+
+.PP
+Reimplemented in \fBFibonacciPg\fP\&.
+.SS "virtual long Progression::next_value ()\fR [pure virtual]\fP"
+
+.PP
+Advances to and returns the next value in the progression\&. This is a pure virtual function – derived classes must provide their own implementation\&. 
+.PP
+\fBReturns\fP
+.RS 4
+The next value in the sequence\&. 
+.RE
+.PP
+
+.PP
+Implemented in \fBArithProgression\fP, \fBFibonacciPg\fP, and \fBGeometricProgression\fP\&.
+.SS "void Progression::print_progression (int n)"
+
+.PP
+Prints the first n terms of the progression\&. The output is space-separated on a single line followed by a newline\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP Number of terms to print (n ≥ 1)\&. 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Progression Library from the source code\&.

@@ -11,12 +11,8 @@ for n = 5, 10, 15, 20, . . . , 100. You should run at least
 for each n, the number of experiments for that n, such that
 two people in that test have the same birthday.
 */
-#include <iostream>
 #include <print>
-#include <stdexcept>
 #include <string>
-
-using std::println;
 using std::string;
 
 /*

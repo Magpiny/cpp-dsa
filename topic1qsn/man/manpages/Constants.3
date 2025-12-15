@@ -1,0 +1,83 @@
+.TH "Constants" 3 "Sun Dec 14 2025 15:25:29" "Version 0.0.1" "My Calendar" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Constants \- Global Configuration Constants
+.PP
+ \- Static data used for calendar generation\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "constexpr std::array< std::string, 12 > \fBMONTHS\fP"
+.br
+.RI "Full names of the twelve months\&. "
+.ti -1c
+.RI "constexpr std::array< std::string, 7 > \fBDAYS\fP"
+.br
+.RI "Full names of the seven days of the week\&. "
+.ti -1c
+.RI "constexpr std::array< std::string, 7 > \fBDAYS_ABBR\fP"
+.br
+.RI "Abbreviated names of the days for column headers\&. "
+.ti -1c
+.RI "constexpr std::array< int, 12 > \fBDAYS_IN_MONTH\fP"
+.br
+.RI "Standard number of days in each month (non-leap year)\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Static data used for calendar generation\&. 
+
+
+.SH "Variable Documentation"
+.PP 
+.SS "std::array<std::string, 7> DAYS\fR [constexpr]\fP"
+\fBInitial value:\fP
+.nf
+= {"Sunday",    "Monday",   "Tuesday",
+    "Wednesday", "Thursday", "Friday",
+    "Saturday"}
+.PP
+.fi
+
+.PP
+Full names of the seven days of the week\&. 
+.SS "std::array<std::string, 7> DAYS_ABBR\fR [constexpr]\fP"
+\fBInitial value:\fP
+.nf
+= {"Sun", "Mon", "Tue", "Wed",
+      "Thu", "Fri", "Sat"}
+.PP
+.fi
+
+.PP
+Abbreviated names of the days for column headers\&. 
+.SS "std::array<int, 12> DAYS_IN_MONTH\fR [constexpr]\fP"
+\fBInitial value:\fP
+.nf
+= {31, 28, 31, 30, 31, 30,
+        31, 31, 30, 31, 30, 31}
+.PP
+.fi
+
+.PP
+Standard number of days in each month (non-leap year)\&. 
+.SS "std::array<std::string, 12> MONTHS\fR [constexpr]\fP"
+\fBInitial value:\fP
+.nf
+= {
+  "January", "February", "March",     "April",   "May",      "June",
+  "July",    "August",   "September", "October", "November", "December"}
+.PP
+.fi
+
+.PP
+Full names of the twelve months\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Calendar from the source code\&.

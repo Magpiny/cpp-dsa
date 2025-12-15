@@ -1,0 +1,122 @@
+\doxysection{progression.\+hpp}
+\hypertarget{progression_8hpp_source}{}\label{progression_8hpp_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <format>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00040\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classProgression}{Progression}}\ \{}
+\DoxyCodeLine{00041\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00049\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classProgression_a2ff54b452237baa0939926ff14e1fe34}{first\_value}}();}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00058\ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classProgression_aaf7ff9664dc26722c4839b9bcccf219f}{next\_value}}()\ =\ 0;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00066\ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProgression_aeb6e25fee5833517b9073310bf4c9a52}{print\_progression}}(\textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00069\ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classProgression_a7dcea34ac37d351dc632b08337bbc9cb}{\string~Progression}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00072\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}};\ \ }
+\DoxyCodeLine{00073\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}};\ }
+\DoxyCodeLine{00074\ \};}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00083\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classArithProgression_ae6adf6caaed1dc60bdd9dab7e77fdeb6}{ArithProgression}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classProgression}{Progression}}\ \{}
+\DoxyCodeLine{00084\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00091\ \ \ \mbox{\hyperlink{classArithProgression_ae6adf6caaed1dc60bdd9dab7e77fdeb6}{ArithProgression}}(\textcolor{keywordtype}{long}\ i\ =\ 1,\ \textcolor{keywordtype}{long}\ f\ =\ 0);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00099\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classArithProgression_a5f9023613b3f7b38942f5598ac6c4efe}{next\_value}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00100\ }
+\DoxyCodeLine{00101\ \ \ \textcolor{keyword}{friend}\ std::ostream\ \&operator<<(std::ostream\ \&out,}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{classArithProgression_ae6adf6caaed1dc60bdd9dab7e77fdeb6}{ArithProgression}}\ \&sdt);}
+\DoxyCodeLine{00103\ }
+\DoxyCodeLine{00104\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00105\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classArithProgression_abe62e738f11278d06f2b7a642963a4cf}{inc}};\ }
+\DoxyCodeLine{00106\ \};}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00115\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGeometricProgression_acff18f00c7b55be5aabc2d352b6556d0}{GeometricProgression}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classProgression}{Progression}}\ \{}
+\DoxyCodeLine{00116\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00123\ \ \ \mbox{\hyperlink{classGeometricProgression_acff18f00c7b55be5aabc2d352b6556d0}{GeometricProgression}}(\textcolor{keywordtype}{long}\ b\ =\ 2);}
+\DoxyCodeLine{00124\ }
+\DoxyCodeLine{00131\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classGeometricProgression_a2db5eb07eedf4a79444692d27fab4a48}{next\_value}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00133\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00134\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classGeometricProgression_a637ee2ba7e39b589e1a016257b51f620}{base}};\ }
+\DoxyCodeLine{00135\ \};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00143\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFibonacciPg_abb0b89d606d93206925295922caebdd0}{FibonacciPg}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classProgression}{Progression}}\ \{}
+\DoxyCodeLine{00144\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00145\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classFibonacciPg_a2e05b91a5a9d0782e4507a25184a0ab7}{sec\_v}};\ }
+\DoxyCodeLine{00146\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classFibonacciPg_af0cc4999fb4dc15724459aab2336dc0c}{prev}};\ \ }
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00156\ \ \ \mbox{\hyperlink{classFibonacciPg_abb0b89d606d93206925295922caebdd0}{FibonacciPg}}(\textcolor{keywordtype}{long}\ f\ =\ 0,\ \textcolor{keywordtype}{long}\ s\ =\ 1);}
+\DoxyCodeLine{00157\ }
+\DoxyCodeLine{00162\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classFibonacciPg_a980bbace502a7b5316076446c6d0325e}{first\_value}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00163\ }
+\DoxyCodeLine{00168\ \ \ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classFibonacciPg_a8e6400d89a8c7903bee088ca4e3a3085}{next\_value}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00169\ \};}
+\DoxyCodeLine{00170\ }
+\DoxyCodeLine{00171\ \mbox{\hyperlink{classArithProgression_ae6adf6caaed1dc60bdd9dab7e77fdeb6}{ArithProgression::ArithProgression}}(\textcolor{keywordtype}{long}\ i,\ \textcolor{keywordtype}{long}\ f)\ \{}
+\DoxyCodeLine{00172\ \ \ \mbox{\hyperlink{classArithProgression_abe62e738f11278d06f2b7a642963a4cf}{inc}}\ =\ i;}
+\DoxyCodeLine{00173\ \ \ \mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}}\ =\ f;}
+\DoxyCodeLine{00174\ \ \ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}\ =\ f;}
+\DoxyCodeLine{00175\ \};}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classProgression_a2ff54b452237baa0939926ff14e1fe34}{Progression::first\_value}}()\ \{}
+\DoxyCodeLine{00178\ \ \ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}\ =\ \mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}};}
+\DoxyCodeLine{00179\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}};}
+\DoxyCodeLine{00180\ \}}
+\DoxyCodeLine{00181\ }
+\DoxyCodeLine{00182\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classArithProgression_a5f9023613b3f7b38942f5598ac6c4efe}{ArithProgression::next\_value}}()\ \{}
+\DoxyCodeLine{00183\ \ \ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}\ +=\ \mbox{\hyperlink{classArithProgression_abe62e738f11278d06f2b7a642963a4cf}{inc}};}
+\DoxyCodeLine{00184\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}};}
+\DoxyCodeLine{00185\ \}}
+\DoxyCodeLine{00186\ }
+\DoxyCodeLine{00187\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProgression_aeb6e25fee5833517b9073310bf4c9a52}{Progression::print\_progression}}(\textcolor{keywordtype}{int}\ n)\ \{}
+\DoxyCodeLine{00188\ \ \ std::cout\ <<\ std::format(\textcolor{stringliteral}{"{}\{\}"{}},\ \mbox{\hyperlink{classProgression_a2ff54b452237baa0939926ff14e1fe34}{first\_value}}());}
+\DoxyCodeLine{00189\ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 2;\ i\ <=\ n;\ ++i)\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ std::cout\ <<\ std::format(\textcolor{stringliteral}{"{}\ \{\}\ "{}},\ \mbox{\hyperlink{classProgression_aaf7ff9664dc26722c4839b9bcccf219f}{next\_value}}());}
+\DoxyCodeLine{00191\ \ \ \};}
+\DoxyCodeLine{00192\ \ \ std::cout\ <<\ std::endl;}
+\DoxyCodeLine{00193\ \}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00195\ std::ostream\ \&operator<<(std::ostream\ \&out,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classArithProgression}{ArithProgression}}\ \&apg)\ \{}
+\DoxyCodeLine{00196\ \ \ out\ <<\ \textcolor{stringliteral}{"{}first\ value:\ "{}}\ <<\ apg.\mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}}\ <<\ \textcolor{stringliteral}{"{}\ Current\ value:\ "{}}\ <<\ apg.\mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}increment\ by:\ "{}}\ <<\ apg.\mbox{\hyperlink{classArithProgression_abe62e738f11278d06f2b7a642963a4cf}{inc}}\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \textcolor{keywordflow}{return}\ out;}
+\DoxyCodeLine{00200\ \};}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00203\ \mbox{\hyperlink{classGeometricProgression_acff18f00c7b55be5aabc2d352b6556d0}{GeometricProgression::GeometricProgression}}(\textcolor{keywordtype}{long}\ b)\ :\ \mbox{\hyperlink{classGeometricProgression_a637ee2ba7e39b589e1a016257b51f620}{base}}(b)\ \{}
+\DoxyCodeLine{00204\ \ \ \mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}}\ =\ 1;}
+\DoxyCodeLine{00205\ \ \ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}\ =\ 1;}
+\DoxyCodeLine{00206\ \};}
+\DoxyCodeLine{00207\ }
+\DoxyCodeLine{00208\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classGeometricProgression_a2db5eb07eedf4a79444692d27fab4a48}{GeometricProgression::next\_value}}()\ \{}
+\DoxyCodeLine{00209\ \ \ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}\ *=\ \mbox{\hyperlink{classGeometricProgression_a637ee2ba7e39b589e1a016257b51f620}{base}};}
+\DoxyCodeLine{00210\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}};}
+\DoxyCodeLine{00211\ \}}
+\DoxyCodeLine{00212\ }
+\DoxyCodeLine{00214\ \mbox{\hyperlink{classFibonacciPg_abb0b89d606d93206925295922caebdd0}{FibonacciPg::FibonacciPg}}(\textcolor{keywordtype}{long}\ \mbox{\hyperlink{classFibonacciPg_a980bbace502a7b5316076446c6d0325e}{first\_value}},\ \textcolor{keywordtype}{long}\ second\_value)\ \{}
+\DoxyCodeLine{00215\ \ \ \mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}}\ =\ \mbox{\hyperlink{classFibonacciPg_a980bbace502a7b5316076446c6d0325e}{first\_value}};}
+\DoxyCodeLine{00216\ \ \ \mbox{\hyperlink{classFibonacciPg_a2e05b91a5a9d0782e4507a25184a0ab7}{sec\_v}}\ =\ second\_value;}
+\DoxyCodeLine{00217\ \ \ \mbox{\hyperlink{classFibonacciPg_af0cc4999fb4dc15724459aab2336dc0c}{prev}}\ =\ \mbox{\hyperlink{classFibonacciPg_a2e05b91a5a9d0782e4507a25184a0ab7}{sec\_v}}\ -\/\ \mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}};}
+\DoxyCodeLine{00218\ \}}
+\DoxyCodeLine{00219\ }
+\DoxyCodeLine{00220\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classFibonacciPg_a980bbace502a7b5316076446c6d0325e}{FibonacciPg::first\_value}}()\ \{}
+\DoxyCodeLine{00221\ \ \ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}\ =\ \mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}};}
+\DoxyCodeLine{00222\ \ \ \mbox{\hyperlink{classFibonacciPg_af0cc4999fb4dc15724459aab2336dc0c}{prev}}\ =\ \mbox{\hyperlink{classFibonacciPg_a2e05b91a5a9d0782e4507a25184a0ab7}{sec\_v}}\ -\/\ \mbox{\hyperlink{classProgression_a3846cba453b88d1ea89d94c41d7a6fe3}{first}};}
+\DoxyCodeLine{00223\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}};}
+\DoxyCodeLine{00224\ \}}
+\DoxyCodeLine{00225\ }
+\DoxyCodeLine{00226\ \textcolor{keywordtype}{long}\ \mbox{\hyperlink{classFibonacciPg_a8e6400d89a8c7903bee088ca4e3a3085}{FibonacciPg::next\_value}}()\ \{}
+\DoxyCodeLine{00227\ \ \ \textcolor{keywordtype}{long}\ next\ =\ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}\ +\ \mbox{\hyperlink{classFibonacciPg_af0cc4999fb4dc15724459aab2336dc0c}{prev}};}
+\DoxyCodeLine{00228\ \ \ \mbox{\hyperlink{classFibonacciPg_af0cc4999fb4dc15724459aab2336dc0c}{prev}}\ =\ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}};}
+\DoxyCodeLine{00229\ \ \ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}}\ =\ next;}
+\DoxyCodeLine{00230\ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classProgression_a8acb613e86224484a57de4d3e8a9ec0d}{curr}};}
+\DoxyCodeLine{00231\ \}}
+
+\end{DoxyCode}

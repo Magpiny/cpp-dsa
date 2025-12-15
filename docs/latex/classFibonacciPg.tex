@@ -1,0 +1,155 @@
+\doxysection{Fibonacci\+Pg Class Reference}
+\hypertarget{classFibonacciPg}{}\label{classFibonacciPg}\index{FibonacciPg@{FibonacciPg}}
+
+
+Fibonacci \doxylink{classProgression}{Progression}\+: each term is the sum of the previous two terms.  
+
+
+
+
+{\ttfamily \#include $<$progression.\+hpp$>$}
+
+
+
+Inheritance diagram for Fibonacci\+Pg\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classFibonacciPg__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fibonacci\+Pg\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=193pt]{classFibonacciPg__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFibonacciPg_abb0b89d606d93206925295922caebdd0}{Fibonacci\+Pg}} (long f=0, long s=1)
+\begin{DoxyCompactList}\small\item\em \doxylink{classFibonacciPg}{Fibonacci\+Pg} constructor Takes two arguments first value and second value. \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classFibonacciPg_a980bbace502a7b5316076446c6d0325e}{first\+\_\+value}} () override
+\begin{DoxyCompactList}\small\item\em sets the first value \end{DoxyCompactList}\item 
+long \mbox{\hyperlink{classFibonacciPg_a8e6400d89a8c7903bee088ca4e3a3085}{next\+\_\+value}} () override
+\begin{DoxyCompactList}\small\item\em Calculates the next value in the progression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classProgression}{Progression}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classProgression_aeb6e25fee5833517b9073310bf4c9a52}{print\+\_\+progression}} (int n)
+\begin{DoxyCompactList}\small\item\em Prints the first n terms of the progression. \end{DoxyCompactList}\item 
+virtual {\bfseries \texorpdfstring{$\sim$}{\string~}\+Progression} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor to allow proper cleanup of derived objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classFibonacciPg_a2e05b91a5a9d0782e4507a25184a0ab7}\label{classFibonacciPg_a2e05b91a5a9d0782e4507a25184a0ab7} 
+long {\bfseries sec\+\_\+v}
+\begin{DoxyCompactList}\small\item\em second value \end{DoxyCompactList}\item 
+\Hypertarget{classFibonacciPg_af0cc4999fb4dc15724459aab2336dc0c}\label{classFibonacciPg_af0cc4999fb4dc15724459aab2336dc0c} 
+long {\bfseries prev}
+\begin{DoxyCompactList}\small\item\em previous value \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classProgression}{Progression}}}
+\begin{DoxyCompactItemize}
+\item 
+long {\bfseries curr}
+\begin{DoxyCompactList}\small\item\em Current value in the progression. \end{DoxyCompactList}\item 
+long {\bfseries first}
+\begin{DoxyCompactList}\small\item\em First value of the progression. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Fibonacci \doxylink{classProgression}{Progression}\+: each term is the sum of the previous two terms. 
+
+\begin{DoxyNote}{Note}
+Example; with first term 0 and second term 1; the next term is 0+1=1, ie 0,1,1,2,3,5,8,13,21,... 
+\end{DoxyNote}
+
+
+\label{doc-constructors}
+\Hypertarget{classFibonacciPg_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFibonacciPg_abb0b89d606d93206925295922caebdd0}\index{FibonacciPg@{FibonacciPg}!FibonacciPg@{FibonacciPg}}
+\index{FibonacciPg@{FibonacciPg}!FibonacciPg@{FibonacciPg}}
+\doxysubsubsection{\texorpdfstring{FibonacciPg()}{FibonacciPg()}}
+{\footnotesize\ttfamily \label{classFibonacciPg_abb0b89d606d93206925295922caebdd0} 
+Fibonacci\+Pg\+::\+Fibonacci\+Pg (\begin{DoxyParamCaption}\item[{long}]{f}{ = {\ttfamily 0}, }\item[{long}]{s}{ = {\ttfamily 1}}\end{DoxyParamCaption})}
+
+
+
+\doxylink{classFibonacciPg}{Fibonacci\+Pg} constructor Takes two arguments first value and second value. 
+
+Fibonacci \doxylink{classProgression}{Progression}.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{in}}  & {\em f} & first value \\
+\hline
+\mbox{\texttt{in}}  & {\em s} & second value Initialize f and s to 0 and 1 respectively \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFibonacciPg_abb0b89d606d93206925295922caebdd0_cgraph}
+\end{center}
+\end{figure}
+
+
+\label{doc-func-members}
+\Hypertarget{classFibonacciPg_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFibonacciPg_a980bbace502a7b5316076446c6d0325e}\index{FibonacciPg@{FibonacciPg}!first\_value@{first\_value}}
+\index{first\_value@{first\_value}!FibonacciPg@{FibonacciPg}}
+\doxysubsubsection{\texorpdfstring{first\_value()}{first\_value()}}
+{\footnotesize\ttfamily \label{classFibonacciPg_a980bbace502a7b5316076446c6d0325e} 
+long Fibonacci\+Pg\+::first\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+sets the first value 
+
+\begin{DoxyReturn}{Returns}
+first value 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classProgression_a2ff54b452237baa0939926ff14e1fe34}{Progression}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFibonacciPg_a980bbace502a7b5316076446c6d0325e_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classFibonacciPg_a8e6400d89a8c7903bee088ca4e3a3085}\index{FibonacciPg@{FibonacciPg}!next\_value@{next\_value}}
+\index{next\_value@{next\_value}!FibonacciPg@{FibonacciPg}}
+\doxysubsubsection{\texorpdfstring{next\_value()}{next\_value()}}
+{\footnotesize\ttfamily \label{classFibonacciPg_a8e6400d89a8c7903bee088ca4e3a3085} 
+long Fibonacci\+Pg\+::next\+\_\+value (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates the next value in the progression. 
+
+\begin{DoxyReturn}{Returns}
+next value in fibonacci progression 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{classProgression_aaf7ff9664dc26722c4839b9bcccf219f}{Progression}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+progression.\+hpp\end{DoxyCompactItemize}

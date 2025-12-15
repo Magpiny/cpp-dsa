@@ -1,0 +1,20 @@
+# Poxy configuration file for progression library
+# See https://github.com/marzer/poxy for more information
+
+name = 'progression'
+author = 'Magpiny BO'
+description = 'A header-only C++ progression library implementing arithmetic, geometric, and Fibonacci progressions'
+github = 'Magpiny/cpp-dsa'
+cpp = 17
+theme='dark'
+license = ['MIT', 'https://opensource.org/licenses/MIT']
+twitter = 'SamuelWanjare'
+
+[sources]
+paths = ['progression.hpp']
+
+[warnings]
+enabled         = true
+treat_as_errors = false
+undocumented    = true
+

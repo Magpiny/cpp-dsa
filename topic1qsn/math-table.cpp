@@ -52,24 +52,26 @@ void print_math_table(long rows, long cols) {
 
   // --> Print the table Heading
   const std::string table_title = "A Multiplication Table";
-  std::println("\n{:<10} : {}x{}", table_title, rows, cols);
+  std::println("\n{:<20} : {}x{}", table_title, rows, cols);
 
   // --> Print the table header row
-  std::print("   X  ");
+  std::print("\033[1;32m {:^5} \033[0m", "X");
+
   for (long j = 1; j < cols + 1; ++j) {
-    std::print("{:>4}", j);
+    std::print("\033[1;31m{:4}\033[0m", j);
   }
-  std::print("\n ----|");
+
+  std::print("\n -----|");
   for (long j = 1; j < cols + 1; j++)
     std::print("----");
   std::println();
 
   // --> Print the contents of the table
   for (long i = 1; i < rows + 1; ++i) {
-    std::print("{:4} |", i);
+    std::print("\033[1;31m {:4} |\033[0m", i);
     for (long j = 1; j < cols + 1; ++j) {
       math_table[i][j] = i * j;
-      std::print("{:4}", math_table[i][j]);
+      std::print("\033[1;34m{:4}\033[0m", math_table[i][j]);
     }
     std::println("");
   }

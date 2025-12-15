@@ -1,0 +1,125 @@
+.TH "FibonacciPg" 3 "Mon Dec 15 2025 21:05:24" "Version 0.0.1" "Progression Library" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+FibonacciPg \- Fibonacci \fBProgression\fP: each term is the sum of the previous two terms\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <progression\&.hpp>\fP
+.PP
+Inherits \fBProgression\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBFibonacciPg\fP (long f=0, long s=1)"
+.br
+.RI "\fBFibonacciPg\fP constructor Takes two arguments first value and second value\&. "
+.ti -1c
+.RI "long \fBfirst_value\fP () override"
+.br
+.RI "sets the first value "
+.ti -1c
+.RI "long \fBnext_value\fP () override"
+.br
+.RI "Calculates the next value in the progression\&. "
+.in -1c
+
+Public Member Functions inherited from \fBProgression\fP
+.in +1c
+.ti -1c
+.RI "void \fBprint_progression\fP (int n)"
+.br
+.RI "Prints the first n terms of the progression\&. "
+.ti -1c
+.RI "virtual \fB~Progression\fP ()=default"
+.br
+.RI "Virtual destructor to allow proper cleanup of derived objects\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "long \fBsec_v\fP"
+.br
+.RI "second value "
+.ti -1c
+.RI "long \fBprev\fP"
+.br
+.RI "previous value "
+.in -1c
+
+Protected Attributes inherited from \fBProgression\fP
+.in +1c
+.ti -1c
+.RI "long \fBcurr\fP"
+.br
+.RI "Current value in the progression\&. "
+.ti -1c
+.RI "long \fBfirst\fP"
+.br
+.RI "First value of the progression\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Fibonacci \fBProgression\fP: each term is the sum of the previous two terms\&. 
+
+
+.PP
+\fBNote\fP
+.RS 4
+Example; with first term 0 and second term 1; the next term is 0+1=1, ie 0,1,1,2,3,5,8,13,21,\&.\&.\&. 
+.RE
+.PP
+
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "FibonacciPg::FibonacciPg (long f = \fR0\fP, long s = \fR1\fP)"
+
+.PP
+\fBFibonacciPg\fP constructor Takes two arguments first value and second value\&. Fibonacci \fBProgression\fP\&.
+
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP first value 
+.br
+\fIs\fP second value Initialize f and s to 0 and 1 respectively 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "long FibonacciPg::first_value ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+sets the first value 
+.PP
+\fBReturns\fP
+.RS 4
+first value 
+.RE
+.PP
+
+.PP
+Reimplemented from \fBProgression\fP\&.
+.SS "long FibonacciPg::next_value ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Calculates the next value in the progression\&. 
+.PP
+\fBReturns\fP
+.RS 4
+next value in fibonacci progression 
+.RE
+.PP
+
+.PP
+Implements \fBProgression\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Progression Library from the source code\&.

@@ -1,0 +1,191 @@
+\doxysection{calendar.\+cpp File Reference}
+\hypertarget{calendar_8cpp}{}\label{calendar_8cpp}\index{calendar.cpp@{calendar.cpp}}
+
+
+A C++23 console application to generate a yearly calendar.  
+
+
+{\ttfamily \#include $<$array$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include $<$print$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{calendar_8cpp_ab345f7b66a3e361e0a77d7b7cbf235b9}{is\+\_\+leap\+\_\+year}} (int year)
+\begin{DoxyCompactList}\small\item\em Checks if a specific year is a leap year. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{calendar_8cpp_ab56cdf3b8f2b1c90243fcf79ae296e6a}{days\+\_\+in\+\_\+feb}} (int year)
+\begin{DoxyCompactList}\small\item\em Determines the number of days in February for a specific year. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{calendar_8cpp_aedc3ce432dd092a0bf2f89525f53a39b}{is\+\_\+valid\+\_\+year}} (int year)
+\begin{DoxyCompactList}\small\item\em Validates if the year is within the supported range. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{calendar_8cpp_a3bfe076e7a14bdd0a372995389c8291e}{calculate\+\_\+jan\+\_\+1\+\_\+day}} (int year)
+\begin{DoxyCompactList}\small\item\em Calculates the day of the week for January 1st of the given year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{calendar_8cpp_a4d0432112914a5965209cc97baf7cf90}{print\+\_\+calendar}} (int year, int start\+\_\+day\+\_\+num)
+\begin{DoxyCompactList}\small\item\em Prints the formatted calendar to the console. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{calendar_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Main entry point of the application. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+constexpr std\+::array$<$ std\+::string, 12 $>$ \mbox{\hyperlink{group__Constants_gaa13a688ae673708acf55de4fa09cf591}{MONTHS}}
+\begin{DoxyCompactList}\small\item\em Full names of the twelve months. \end{DoxyCompactList}\item 
+constexpr std\+::array$<$ std\+::string, 7 $>$ \mbox{\hyperlink{group__Constants_gac0ba300da8f6ed38654d84ea25469ce0}{DAYS}}
+\begin{DoxyCompactList}\small\item\em Full names of the seven days of the week. \end{DoxyCompactList}\item 
+constexpr std\+::array$<$ std\+::string, 7 $>$ \mbox{\hyperlink{group__Constants_ga8d049e42ddeba4d9f5458807ed100aac}{DAYS\+\_\+\+ABBR}}
+\begin{DoxyCompactList}\small\item\em Abbreviated names of the days for column headers. \end{DoxyCompactList}\item 
+constexpr std\+::array$<$ int, 12 $>$ \mbox{\hyperlink{group__Constants_ga578fe907ec87591e734e620e41bace03}{DAYS\+\_\+\+IN\+\_\+\+MONTH}}
+\begin{DoxyCompactList}\small\item\em Standard number of days in each month (non-\/leap year). \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A C++23 console application to generate a yearly calendar. 
+
+This program accepts a four-\/digit year and prints a formatted calendar for that year to the standard output. It handles leap year logic, calculates the starting day of the week automatically, and formats the output using {\ttfamily std\+::print} and ANSI color codes.
+\begin{DoxyItemize}
+\item \begin{DoxyNote}{Note}
+This program requires a C++23 compliant compiler due to the usage of {\ttfamily \texorpdfstring{$<$}{<}print\texorpdfstring{$>$}{>}} and {\ttfamily std\+::format}. 
+\end{DoxyNote}
+
+\end{DoxyItemize}
+
+\label{doc-func-members}
+\Hypertarget{calendar_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{calendar_8cpp_a3bfe076e7a14bdd0a372995389c8291e}\index{calendar.cpp@{calendar.cpp}!calculate\_jan\_1\_day@{calculate\_jan\_1\_day}}
+\index{calculate\_jan\_1\_day@{calculate\_jan\_1\_day}!calendar.cpp@{calendar.cpp}}
+\doxysubsubsection{\texorpdfstring{calculate\_jan\_1\_day()}{calculate\_jan\_1\_day()}}
+{\footnotesize\ttfamily \label{calendar_8cpp_a3bfe076e7a14bdd0a372995389c8291e} 
+int calculate\+\_\+jan\+\_\+1\+\_\+day (\begin{DoxyParamCaption}\item[{int}]{year}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the day of the week for January 1st of the given year. 
+
+This function uses a variation of the standard day-\/of-\/week algorithms (similar to Gauss\textquotesingle{}s or Zeller\textquotesingle{}s) to determine the offset.
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em year} & The four-\/digit year. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An integer representing the day of the week (0 = Sunday, 1 = Monday, ..., 6 = Saturday). 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{calendar_8cpp_ab56cdf3b8f2b1c90243fcf79ae296e6a}\index{calendar.cpp@{calendar.cpp}!days\_in\_feb@{days\_in\_feb}}
+\index{days\_in\_feb@{days\_in\_feb}!calendar.cpp@{calendar.cpp}}
+\doxysubsubsection{\texorpdfstring{days\_in\_feb()}{days\_in\_feb()}}
+{\footnotesize\ttfamily \label{calendar_8cpp_ab56cdf3b8f2b1c90243fcf79ae296e6a} 
+int days\+\_\+in\+\_\+feb (\begin{DoxyParamCaption}\item[{int}]{year}{}\end{DoxyParamCaption})}
+
+
+
+Determines the number of days in February for a specific year. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em year} & The year to check. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily 29} if the year is a leap year, {\ttfamily 28} otherwise. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{calendar_8cpp_ab345f7b66a3e361e0a77d7b7cbf235b9}\index{calendar.cpp@{calendar.cpp}!is\_leap\_year@{is\_leap\_year}}
+\index{is\_leap\_year@{is\_leap\_year}!calendar.cpp@{calendar.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_leap\_year()}{is\_leap\_year()}}
+{\footnotesize\ttfamily \label{calendar_8cpp_ab345f7b66a3e361e0a77d7b7cbf235b9} 
+bool is\+\_\+leap\+\_\+year (\begin{DoxyParamCaption}\item[{int}]{year}{}\end{DoxyParamCaption})}
+
+
+
+Checks if a specific year is a leap year. 
+
+A year is a leap year if it is divisible by 4, except for end-\/of-\/century years, which must be divisible by 400.
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em year} & The year to validate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if the year is a leap year, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{calendar_8cpp_aedc3ce432dd092a0bf2f89525f53a39b}\index{calendar.cpp@{calendar.cpp}!is\_valid\_year@{is\_valid\_year}}
+\index{is\_valid\_year@{is\_valid\_year}!calendar.cpp@{calendar.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_valid\_year()}{is\_valid\_year()}}
+{\footnotesize\ttfamily \label{calendar_8cpp_aedc3ce432dd092a0bf2f89525f53a39b} 
+bool is\+\_\+valid\+\_\+year (\begin{DoxyParamCaption}\item[{int}]{year}{}\end{DoxyParamCaption})}
+
+
+
+Validates if the year is within the supported range. 
+
+
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em year} & The year input by the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} if year is between 1 and 9999, {\ttfamily false} otherwise. 
+\end{DoxyReturn}
+
+\end{DoxyItemize}\Hypertarget{calendar_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{calendar.cpp@{calendar.cpp}!main@{main}}
+\index{main@{main}!calendar.cpp@{calendar.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{calendar_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Main entry point of the application. 
+
+Handles user input via Command Line Arguments or Standard Input. It validates the input for numeric consistency and range before generating the calendar.
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of command-\/line arguments. \\
+\hline
+{\em argv} & Array of command-\/line argument strings. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily 0} on success, {\ttfamily 1} on error (invalid input or out of range).
+\end{DoxyReturn}
+
+\item 
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & If non-\/numeric input is provided via {\ttfamily std\+::cin}. \\
+\hline
+{\em std\+::out\+\_\+of\+\_\+range} & If the year is not between 1 and 9999. \\
+\hline
+\end{DoxyExceptions}
+
+\end{DoxyItemize}\Hypertarget{calendar_8cpp_a4d0432112914a5965209cc97baf7cf90}\index{calendar.cpp@{calendar.cpp}!print\_calendar@{print\_calendar}}
+\index{print\_calendar@{print\_calendar}!calendar.cpp@{calendar.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_calendar()}{print\_calendar()}}
+{\footnotesize\ttfamily \label{calendar_8cpp_a4d0432112914a5965209cc97baf7cf90} 
+void print\+\_\+calendar (\begin{DoxyParamCaption}\item[{int}]{year}{, }\item[{int}]{start\+\_\+day\+\_\+num}{}\end{DoxyParamCaption})}
+
+
+
+Prints the formatted calendar to the console. 
+
+Iterates through all 12 months, calculating spacing for the first week and wrapping weeks correctly. It highlights the date numbers in Cyan using ANSI escape codes.
+\begin{DoxyItemize}
+\item 
+\begin{DoxyParams}{Parameters}
+{\em year} & The year to display. \\
+\hline
+{\em start\+\_\+day\+\_\+num} & The calculated weekday index (0-\/6) for January 1st of that year. \\
+\hline
+\end{DoxyParams}
+
+\end{DoxyItemize}
