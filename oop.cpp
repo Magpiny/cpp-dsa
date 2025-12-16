@@ -11,14 +11,6 @@
 #include <format>
 #include <iostream>
 
-/**
- * @brief Abstract base class representing a generic numeric progression.
- *
- * This class defines the common interface for all progressions.
- * It cannot be instantiated directly because next_value() is pure virtual.
- * Derived classes must implement their specific way of advancing to the next
- * term.
- */
 class Progression {
 public:
   virtual long first_value();

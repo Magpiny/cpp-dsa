@@ -9,6 +9,9 @@ cpp = 17
 theme='dark'
 license = ['MIT', 'https://opensource.org/licenses/MIT']
 twitter = 'SamuelWanjare'
+dot = true
+extra_files = ['README.md']
+main_page = true
 
 [sources]
 paths = ['progression.hpp']
@@ -18,3 +21,6 @@ enabled         = true
 treat_as_errors = false
 undocumented    = true
 
+[badges]
+'C++20'       = [ 'badge-C++20.svg', 'https://en.cppreference.com/w/cpp/compiler_support' ]
+'TOML v1.0.0' = [ 'badge-TOML.svg', 'https://toml.io/en/v1.0.0' ]

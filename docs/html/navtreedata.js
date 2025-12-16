@@ -25,6 +25,9 @@
 var NAVTREE =
 [
   [ "Progression Library", "index.html", [
+    [ "Features", "index.html#autotoc_md1", null ],
+    [ "Usage", "index.html#autotoc_md2", null ],
+    [ "To see the documentation for the core logic, please check the <b><a href=\"classProgression.html\">Progression</a></b> class.", "index.html#autotoc_md3", null ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],

@@ -215,4 +215,10 @@
       <arglist></arglist>
     </member>
   </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title>Progression Library</title>
+    <filename>index.html</filename>
+    <docanchor file="index.html" title="Progression Library">md_poxy__main__page</docanchor>
+  </compound>
 </tagfile>

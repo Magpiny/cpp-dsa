@@ -1,5 +1,5 @@
 <map id="GeometricProgression" name="GeometricProgression">
-<area shape="rect" id="Node000001" title="Geometric progression: each term is obtained by multiplying by a fixed base." alt="" coords="5,215,186,310"/>
-<area shape="rect" id="Node000002" href="$classProgression.html" title="A header only c++ progression library." alt="" coords="21,5,171,167"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="97,180,98,216,93,214,95,184"/>
+<area shape="rect" id="Node000001" title="Geometric progression: each term is obtained by multiplying by a fixed base." alt="" coords="9,266,208,378"/>
+<area shape="rect" id="Node000002" href="$classProgression.html" title="A header only c++ progression library." alt="" coords="5,5,211,218"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="110,231,111,267,106,265,107,236"/>
 </map>

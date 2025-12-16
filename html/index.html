@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <meta charset="utf-8"/>
-  <title>progression A header-only C++ progression library implementing arithmetic, geometric, and Fibonacci progressions</title>
+  <title>Progression Library | progression A header-only C++ progression library implementing arithmetic, geometric, and Fibonacci progressions</title>
   <link href="favicon-dark.png" rel="icon" type="image/png"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="#22272e" name="theme-color"/>
@@ -57,8 +57,17 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          progression
+          Progression Library
         </h1>
+<p><a name="md_poxy__main__page"></a></p><p>A header-only C++ progression library implementing arithmetic, geometric, and Fibonacci progressions.</p><section id="autotoc_md1"><h2><a href="#autotoc_md1">Features</a></h2><ul><li>Arithmetic progressions</li><li>Geometric progressions<br/></li><li>Fibonacci sequences</li><li>Easy-to-use interface</li></ul></section><section id="autotoc_md2"><h2><a href="#autotoc_md2">Usage</a></h2><pre class="m-code"><span class="cp">#include</span> <span class="cpf">"progression.hpp"</span>
+
+<span class="k">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="nc">Progression</span> <span class="o">*</span><span class="n">ap</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">ArithProgression</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="n">ap</span><span class="o">-&gt;</span><span class="nf">print_progression</span><span class="p">(</span><span class="mi">10</span><span class="p">);</span>
+
+    <span class="k">delete</span> <span class="n">ap</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></pre></section><section id="autotoc_md3"><h2><a href="#autotoc_md3">To see the documentation for the core logic, please check the </a></h2></section>
       </div>
     </div>
   </div>

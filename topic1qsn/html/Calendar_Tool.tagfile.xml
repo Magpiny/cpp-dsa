@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.15.0">
+  <compound kind="file">
+    <name>calendar.cpp</name>
+    <filename>calendar_8cpp.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_leap_year</name>
+      <anchorfile>calendar_8cpp.html</anchorfile>
+      <anchor>ab345f7b66a3e361e0a77d7b7cbf235b9</anchor>
+      <arglist>(int year)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>days_in_feb</name>
+      <anchorfile>calendar_8cpp.html</anchorfile>
+      <anchor>ab56cdf3b8f2b1c90243fcf79ae296e6a</anchor>
+      <arglist>(int year)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_valid_year</name>
+      <anchorfile>calendar_8cpp.html</anchorfile>
+      <anchor>aedc3ce432dd092a0bf2f89525f53a39b</anchor>
+      <arglist>(int year)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>calculate_jan_1_day</name>
+      <anchorfile>calendar_8cpp.html</anchorfile>
+      <anchor>a3bfe076e7a14bdd0a372995389c8291e</anchor>
+      <arglist>(int year)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>print_calendar</name>
+      <anchorfile>calendar_8cpp.html</anchorfile>
+      <anchor>a4d0432112914a5965209cc97baf7cf90</anchor>
+      <arglist>(int year, int start_day_num)</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>main</name>
+      <anchorfile>calendar_8cpp.html</anchorfile>
+      <anchor>a0ddf1224851353fc92bfbff6f499fa97</anchor>
+      <arglist>(int argc, char *argv[])</arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::array&lt; std::string, 12 &gt;</type>
+      <name>MONTHS</name>
+      <anchorfile>group___constants.html</anchorfile>
+      <anchor>gaa13a688ae673708acf55de4fa09cf591</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::array&lt; std::string, 7 &gt;</type>
+      <name>DAYS</name>
+      <anchorfile>group___constants.html</anchorfile>
+      <anchor>gac0ba300da8f6ed38654d84ea25469ce0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::array&lt; std::string, 7 &gt;</type>
+      <name>DAYS_ABBR</name>
+      <anchorfile>group___constants.html</anchorfile>
+      <anchor>ga8d049e42ddeba4d9f5458807ed100aac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::array&lt; int, 12 &gt;</type>
+      <name>DAYS_IN_MONTH</name>
+      <anchorfile>group___constants.html</anchorfile>
+      <anchor>ga578fe907ec87591e734e620e41bace03</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>Constants</name>
+    <title>Global Configuration Constants</title>
+    <filename>group___constants.html</filename>
+    <member kind="variable">
+      <type>constexpr std::array&lt; std::string, 12 &gt;</type>
+      <name>MONTHS</name>
+      <anchorfile>group___constants.html</anchorfile>
+      <anchor>gaa13a688ae673708acf55de4fa09cf591</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::array&lt; std::string, 7 &gt;</type>
+      <name>DAYS</name>
+      <anchorfile>group___constants.html</anchorfile>
+      <anchor>gac0ba300da8f6ed38654d84ea25469ce0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::array&lt; std::string, 7 &gt;</type>
+      <name>DAYS_ABBR</name>
+      <anchorfile>group___constants.html</anchorfile>
+      <anchor>ga8d049e42ddeba4d9f5458807ed100aac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>constexpr std::array&lt; int, 12 &gt;</type>
+      <name>DAYS_IN_MONTH</name>
+      <anchorfile>group___constants.html</anchorfile>
+      <anchor>ga578fe907ec87591e734e620e41bace03</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+</tagfile>

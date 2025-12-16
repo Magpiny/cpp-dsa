@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['inc_0',['inc',['../classArithProgression.html#abe62e738f11278d06f2b7a642963a4cf',1,'ArithProgression']]]
+  ['geometricprogression_0',['GeometricProgression',['../classGeometricProgression.html',1,'GeometricProgression'],['../classGeometricProgression.html#acff18f00c7b55be5aabc2d352b6556d0',1,'GeometricProgression::GeometricProgression()']]]
 ];
