@@ -45,10 +45,10 @@ int main() {
 
   for (size_t i = 0; i < lines.size(); ++i) {
     for (size_t j = i + 1; j < lines.size(); ++j) {
-      std::cout << "Line " << i << ": ";
+      std::print(" Line {}: ", i);
       lines[i].print();
 
-      std::cout << "\n Lines " << j << ": ";
+      std::print("\n Line {}: ", j);
       lines[j].print();
       std::println();
 
