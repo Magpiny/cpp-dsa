@@ -51,11 +51,8 @@ public:
     }
   };
 
-  Triangle(std::vector<Point> &verts)
+  Triangle(const std::vector<Point> &verts = std::vector<Point>(3, {0.0, 0.0}))
       : vertices(verts), is_avecofvectors(true) {
-    if (verts.empty()) {
-      verts = std::vector<Point>(3, {0.0, 0.0});
-    }
     if (verts.size() < 3) {
       throw std::invalid_argument("Expected 3 vectors of doubles");
     }
@@ -121,7 +118,7 @@ public:
       throw std::invalid_argument(
           "Polygon Error: A polygon must have 3 or more sides");
   };
-  Quadrilateral(const std::vector<Point> &verts) : coords(verts), is_vec(true) {
+  Quadrilateral(const std::vector<Point> &verts) : is_vec(true), coords(verts) {
     if (verts.size() < 3)
       throw std::invalid_argument(
           "Polygon Error: A polygon MUST have 3 or more vertices!");
@@ -166,8 +163,8 @@ public:
 
 class Pentagon : public Quadrilateral {
 public:
-  Pentagon(double l) : Quadrilateral(l, 6) {};
-  Pentagon(const std::vector<Point> &coords) : Quadrilateral(coords) {};
+  Pentagon(double l) : Quadrilateral(l, 5) {};
+  Pentagon(const std::vector<Point> &points) : Quadrilateral(points) {};
 
   const std::string get_name() const override {
     return std::format("Shape: Pentagon");
@@ -175,32 +172,60 @@ public:
 };
 
 class Octagon : public Quadrilateral {
+  Octagon(double len) : Quadrilateral(len, 8) {};
+  Octagon(const std::vector<Point> &pts) : Quadrilateral(pts) {};
   const std::string get_name() const override {
     return std::format("Shape: Pentagon");
   }
 };
 
-class Hexagon : Quadrilateral {
+class Hexagon : public Quadrilateral {
+public:
+  Hexagon(double len) : Quadrilateral(len, 6) {};
+  Hexagon(const std::vector<Point> &pts) : Quadrilateral(pts) {};
+
   const std::string get_name() const override {
     return std::format("Shape: Hexagon");
   }
 };
 
 class IsoscelesTriangle : public Triangle {
+public:
+  IsoscelesTriangle(std::vector<double> p) : Triangle(p) {};
+  IsoscelesTriangle(const std::vector<Point> &pts) : Triangle(pts) {};
+
   const std::string get_name() const override {
     return std::format("Shape: Isosceles Triangle");
   }
 };
 
 class EquilateralTriangle : public Triangle {
+public:
+  EquilateralTriangle(std::vector<double> p) : Triangle(p) {};
+  EquilateralTriangle(const std::vector<Point> &pts) : Triangle(pts) {};
+
   const std::string get_name() const override {
     return std::format("Shape: Equilateral Triangle");
   }
 };
 
 int main() {
-  Pentagon p({{0.0, 0.0}, {4.0, 0.0}, {4.0, 4.0}, {2.0, 6.0}, {0.0, 4.0}});
-  Pentagon pp(4.5);
+  try {
+    Pentagon p({{0.0, 0.0}, {4.0, 0.0}, {4.0, 4.0}, {2.0, 6.0}, {0.0, 4.0}});
+    Pentagon pp(4.5);
+    EquilateralTriangle eqtr({4.0, 5.0, 6.0});
+
+    std::println("Area of Pentagon1 is {}cm2 {}", p.area(), p.get_name());
+    std::println("Area of Pentagon2 is {:.4f}cm2", pp.area());
+
+    std::println("Perimeter of Pentagon1 is {:.4f}cm2", p.perimeter());
+    std::println("Perimeter of Pentagon2 is {:.4f}cm2", pp.perimeter());
+
+    std::println();
+    std::println("Perimeter is {:.4f} {}", eqtr.perimeter(), eqtr.get_name());
+  } catch (const std::exception &err) {
+    std::cerr << err.what() << "\n";
+  }
 
   return 0;
 };
