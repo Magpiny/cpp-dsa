@@ -67,7 +67,7 @@ public:
         area += vertices[i].x * vertices[j].y;
         area -= vertices.at(j).y * vertices.at(i).x;
       }
-      return std::abs(area) / 2;
+      return std::abs(area) / 2.0;
     } else {
       double p = (sides[0] + sides[1] + sides[2]) / 2;
       double area =
@@ -174,6 +174,7 @@ public:
 class Octagon : public Quadrilateral {
   Octagon(double len) : Quadrilateral(len, 8) {};
   Octagon(const std::vector<Point> &pts) : Quadrilateral(pts) {};
+
   const std::string get_name() const override {
     return std::format("Shape: Pentagon");
   }
@@ -182,7 +183,13 @@ class Octagon : public Quadrilateral {
 class Hexagon : public Quadrilateral {
 public:
   Hexagon(double len) : Quadrilateral(len, 6) {};
-  Hexagon(const std::vector<Point> &pts) : Quadrilateral(pts) {};
+  Hexagon(const std::vector<Point> &pts) : Quadrilateral(pts) {
+    if (pts.size() < 6)
+      throw std::invalid_argument(
+          std::format("Hexagon Error: Must provide 6 coordinates of the "
+                      "hexagon!\n {} provided",
+                      pts.size()));
+  };
 
   const std::string get_name() const override {
     return std::format("Shape: Hexagon");
