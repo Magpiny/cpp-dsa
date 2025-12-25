@@ -6,12 +6,12 @@
 #include <vector>
 
 template <typename T> class Vector {
-  std::vector<int> data;
+  std::vector<T> data;
   size_t size;
 
 public:
   explicit Vector(size_t n) : data(n, T(0)), size(n) {};
-  Vector(std::initializer_list<T> init) : data(init), size(init.size) {};
+  Vector(std::initializer_list<T> init) : data(init), size(init.size()) {};
 
   size_t getSize() { return data.size(); };
 
@@ -80,6 +80,10 @@ public:
   }
 };
 
+template <typename T> Vector<T> operator*(const Vector<T> &v, const T &k) {
+  return v * k; /// > vector(v) x scalar(k)
+}
+
 /** Complex class**/
 class Complex {
   double real;
@@ -107,4 +111,42 @@ public:
   }
 };
 
-int main() { return 0; }
+/// > Using our new types complex in funcs
+[[nodiscard("Complex Type multiplication return value must be used!")]] auto
+cmpmult(const Complex &c, const Complex &cmp) {
+  return c * cmp;
+};
+
+template <typename T>
+[[nodiscard]] auto vecmult(const Vector<T> &v, T k) -> decltype(v * k) {
+  return v * k;
+}
+
+int main() {
+  try {
+    Vector<int> v1_int({1, 2, 3, 8});
+    Vector<int> v2_int = {4, 6, 8, 9};
+    Vector<double> v1_dbl = {4.5, 5.4, 6.8, 7.1};
+
+    auto vproduct = vecmult(v1_int, 3);
+    auto vdot = v1_int.dot(v2_int);
+
+    std::cout << "v1_int: " << v1_int << "\n";
+    std::println("v1_int size: {}", v1_int.getSize());
+    std::cout << "vec v1_int x 3 = " << vproduct << "\n";
+    std::cout << "vec v1_int.dot(v2_int) = " << vdot << "\n";
+
+    Complex k(3, 5);
+    Complex c(2, 3);
+    auto cproduct = cmpmult(k, c);
+
+    std::cout << "Complex number c: " << c << " \tComplex number k: " << k
+              << "\n";
+    std::cout << "Complex number k*c: " << cproduct << "\n";
+
+  } catch (const std::exception &err) {
+    std::cerr << "Error: " << err.what() << "\n";
+  }
+
+  return 0;
+}
